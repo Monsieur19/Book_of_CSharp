@@ -1,0 +1,19 @@
+.zero () {
+  margin: 0;
+  padding: 0;
+}
+
+.setFont(@size; @line; @color: @main-text-color) {
+  font-size: @size;
+  line-height: @line;
+  color: @color;
+  font-weight: 400;
+}
+
+.indentText() {
+  display: inline-block;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: -100%;
+}
