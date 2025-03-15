@@ -8,6 +8,25 @@ const allExtraMenuBtn = document.querySelectorAll('.header__middle-item-link');
 const allExtraMenu = document.querySelectorAll('.header__middle-extra-menu');
 const allCatalogItem = document.querySelectorAll('.catalog__item');
 
+const allCourseLinks = document.querySelectorAll('.course__item-link');
+const allBtnClose = document.querySelectorAll('.popup__btn');
+
+for (let i = 0; i < allCourseLinks.length; i++) {
+  allCourseLinks[i].addEventListener('click', (ev) => {
+    const listClass = ev.currentTarget.classList;
+    const lastClass = '.popup-' + listClass[listClass.length - 1];
+    document.querySelector(lastClass).classList.add('active');
+  })
+}
+
+for (let i = 0; i < allBtnClose.length; i++) {
+  allBtnClose[i].addEventListener('click', (ev) => {
+    const popup = ev.target.parentNode.parentNode;
+    popup.classList.remove('active');
+  })
+}
+
+
 function dltClassActive (arr) {
   for (let i = 0; i < arr.length; i++) {
       arr[i].classList.remove('active');
