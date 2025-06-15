@@ -1,3 +1,67 @@
+const navList = document.querySelectorAll('.item-theme');
+const themeList = document.querySelectorAll('.course__theme');
+const barBtn = document.querySelector('.bar__btn');
+
+function showTheme(ev) {
+  const className = ev.target.classList[2];
+  const numberTheme = className.slice(-3);
+  const theme = document.querySelector('.course__theme--' + numberTheme);
+  
+  for (let i =0; i < themeList.length; i++) {
+    themeList[i].classList.add('disable');
+  }
+
+  theme.classList.remove('disable');
+
+}
+
+for (let i = 0; i < navList.length; i++) {
+  navList[i].addEventListener('click', showTheme)
+}
+
+barBtn.addEventListener('click', () => {
+  for (let i =0; i < themeList.length; i++) {
+    themeList[i].classList.add('disable');
+  }
+
+  document.querySelector('.course__theme--0').classList.remove('disable');
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 const btnBurger = document.querySelector('.header__top-burger');
 const headNav = document.querySelector('.nav--mobile');
 const btnCloseNav = document.querySelector('.nav__btn-close');
@@ -185,3 +249,4 @@ btnSent.addEventListener('click', (ev) => {
   const msg = name + '\n Телефон: ' + tel;
   window.open('mailto:gerankin.a@mail.ru?subject=Заказ&body=' + msg);
 })
+  */
