@@ -102,3 +102,54 @@
 .course__list-0 {
     margin-bottom: 0;
 }
+
+.course__table {
+    margin-bottom: 35px;
+    
+    border-color: #909090;
+
+    & caption {
+        margin-bottom: 5px;
+
+        text-align: left;
+    }
+
+    & th {
+        text-align: left;
+    }
+
+    & th,td {
+        padding: 9px 11px;
+    }
+}
+
+.course__code {
+    position: relative;
+
+    margin-bottom: 35px;
+}
+
+.course__code-result {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+
+    & input {
+        width: 100%;
+        height: 52px;
+
+        background-color: #fff;
+        border: 1px solid #909090;
+        border-radius: 15px;
+    }
+
+    & button {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        border-radius: 15px;
+    }
+}

@@ -23,8 +23,8 @@
   
   <div class="bar">
     <h1 class="bar__title">Программирование на языке C#</h1>
-    <button class="bar__btn">Открыть описание курса</button>
     <h2 class="bar__name">Программа курса</h2>
+    <button class="bar__btn">Открыть описание курса</button>
     <ul class="bar__list-theme">
       <li class="bar__item-theme">
         <ul class="bar__list-lesson">
@@ -107,7 +107,7 @@
         <button class="course__btn">Начать обучение</button>
       </div>
 
-      <div class="course__theme course__theme--1.1 course__theme--1-1">
+      <div class="course__theme course__theme--1.1 course__theme--1-1 disable">
         <h2 class="course__title">1.1 История и особенности языка</h2>
         <h3 class="course__title-h3">Краткая история языка C# (создатели, год появления, развитие)</h3>
         <p>C# («Си Шарп») — объектно-ориентированный язык программирования, созданный компанией <span class="bold">Microsoft</span> в рамках платформы <span class="bold">.NET.</span></p>
@@ -126,8 +126,8 @@
           <li class="course__item">C# предлагает <span class="bold">современные средства разработки,</span> такие как LINQ, async/await, делегаты и обобщённые типы, чего нет в Java и C++ в базовой поставке.</li>
         </ul>
         <div class="course__notice notice">НА ЗАМЕТКУ!<br>Синтаксис C# будет знаком программистам на C++ и Java, но это не делает языки одинаковыми. Важно изучать особенности C# отдельно — он имеет собственные принципы и преимущества.</div>
-        <p>Сравнение языков программирования</p>
-        <table class="course__table">
+        <table class="course__table" border="1" cellspacing="0">
+          <caption>Сравнение языков программирования</caption>
           <thead>
             <tr>
               <th>Язык</th>
@@ -153,24 +153,162 @@
             </tr>
           </tbody>
         </table>
+        <h3 class="course__title-h3">Основные сферы применения (разработка ПО, веб-приложения, игры на Unity)</h3>
+        <p>Сегодня C# — универсальный язык, применяемый во многих областях:</p>
+        <h4 class="course__title-h4">1. Разработка программного обеспечения (ПО)</h4>
+        <ul class="course__list course__list-0">
+          <li class="course__item">Десктопные приложения для Windows (с помощью Windows Forms, WPF, MAUI).</li>
+          <li class="course__item">Инструменты автоматизации и корпоративные решения.</li>
+        </ul>
+        <h4 class="course__title-h4">2. Веб-разработка</h4>
+        <ul class="course__list course__list-0">
+          <li class="course__item">C# используется в связке с ASP.NET для создания надёжных и производительных веб-сервисов, сайтов и API.</li>
+        </ul>
+        <h4 class="course__title-h4">3. Разработка игр</h4>
+        <ul class="course__list course__list-0">
+          <li class="course__item">Является основным языком в Unity — одном из самых популярных игровых движков. Подходит для 2D/3D-игр на ПК, консолях и мобильных устройствах.</li>
+        </ul>
+        <h4 class="course__title-h4">4. Мобильные приложения</h4>
+        <ul class="course__list course__list-0">
+          <li class="course__item">Благодаря Xamarin и .NET MAUI можно писать кроссплатформенные приложения под Android и iOS.</li>
+        </ul>
+        <h4 class="course__title-h4">5. Облачные технологии и нейросети</h4>
+        <ul class="course__list course__list-0">
+          <li class="course__item">Интеграция с Microsoft Azure, поддержка библиотек машинного обучения и работы с большими данными.</li>
+        </ul>
+        <div class="course__notice notice">НА ЗАМЕТКУ!<br>Одна из сильных сторон C# — кроссплатформенность. С появлением .NET Core и .NET 6/7 разработка на C# возможна не только под Windows, но и под Linux/macOS, что делает его конкурентом языкам, традиционно считавшимся более универсальными.</div>
       </div>
 
       <div class="course__theme course__theme--1-2 disable">
-        <h2 class="course__title">Установка и настройка</h2>
-        <p>Интерактивный электронный учебник «Программирование на языке C#» предназначен для студентов, обучающихся ИТ-специальностям, а также для всех, кто стремится самостоятельно освоить основы программирования на современном, универсальном и востребованном языке C#. Учебник включает структурированный теоретический материал, практические задания, интерактивные элементы, а также встроенную проверку знаний.</p>
-        <p>В отличие от многочисленных справочников и технической документации, данный учебник делает акцент именно 
-          на базовые конструкции языка, которые составляют фундамент при дальнейшем изучении C#, работе с фреймворками .NET и создании собственных приложений. Особое внимание уделяется таким темам, как переменные и типы данных, операторы и выражения, работа с циклами и условиями, массивами и строками, методами и классами.
-          Учебник обеспечивает поэтапное освоение материала — от простого к сложному — с регулярным закреплением знаний через практику и самопроверку. Благодаря интерактивному формату и адаптивной структуре он может использоваться как в рамках аудиторных занятий, так и для самостоятельного изучения, включая дистанционные образовательные форматы.</p>
-        <p>Использование данного ресурса поможет вам не только освоить основы языка C#, но и развить алгоритмическое мышление, научиться создавать простые консольные приложения и подготовиться к изучению более продвинутых тем, таких как объектно-ориентированное программирование и работа с графическим интерфейсом пользователя.</p>
+        <h2 class="course__title">1.2 Установка и настройка среды разработки (Visual Studio)</h2>
+        <h3 class="course__title-h3">Где скачать и как установить Visual Studio</h3>
+        <p>Чтобы начать программировать на C#, необходимо установить интегрированную среду разработки — Visual Studio.</p>
+        <p>Перейдите по официальной ссылке: <a href="https://visualstudio.microsoft.com/ru/downloads/">https://visualstudio.microsoft.com/ru/downloads/</a></p>
+        <ul class="course__list">
+          <li class="course__item">На открывшейся странице выберите <span class="bold">Visual Studio Community</span> — это бесплатная версия для обучения и индивидуального использования.</li>
+          <li class="course__item">
+            Нажмите кнопку <span class="bold">«Скачать»,</span> чтобы загрузить установочный файл.
+            <img src="img/image_1.jpg" alt="Фото VS" class="course__img">
+          </li>
+          <li class="course__item">Запустите загруженный файл VisualStudioSetup.exe.</li>
+          <li class="course__item">В открывшемся установщике выберите <span class="bold">рабочую нагрузку "Разработка классических приложений на .NET".</span></li>
+          <li class="course__item">Нажмите <span class="bold">«Установить»</span> — программа загрузит нужные компоненты и установит среду.</li>
+        </ul>
+        <div class="course__notice notice">НА ЗАМЕТКУ!<br>Visual Studio Community — бесплатна для студентов, преподавателей и индивидуальных разработчиков. Она включает поддержку C#, .NET, отладку и инструменты компиляции.</div>
+        <h3 class="course__title-h3">Создание первого проекта в Visual Studio</h3>
+        <p>После установки Visual Studio можно создать свой первый проект:</p>
+        <ul class="course__list">
+          <li class="course__item">Откройте Visual Studio.</li>
+          <li class="course__item">
+            В стартовом окне нажмите «Создание проекта».
+            <img src="img/image_2.jpg" alt="Фото" class="course__img">
+          </li>
+          <li class="course__item">В строке поиска введите <span class="bold">«Консольное приложение»</span> и выберите <span class="bold">«Консольное приложение (.NET Framework)».</span></li>
+          <li class="course__item">Нажмите <span class="bold">«Далее».</span>
+            <img src="img/image_3.jpg" alt="Фото" class="course__img">
+          </li>
+          <li class="course__item">Введите имя проекта, например HelloWorld, и укажите место его сохранения.</li>
+          <li class="course__item">Нажмите <span class="bold">«Создать».</span></li>
+          <li class="course__item">После этого откроется окно с готовым шаблоном программы.
+            <img src="img/image_4.jpg" alt="Фото" class="course__img">
+          </li>
+        </ul>
+        <h3 class="course__title-h3">Основные элементы интерфейса Visual Studio</h3>
+        <p>Интерфейс Visual Studio состоит из нескольких важных частей:</p>
+        <ul class="course__list">
+          <li class="course__item"><span class="bold">Окно редактора кода</span> — центральная область, где пишется и редактируется программный код.</li>
+          <li class="course__item"><span class="bold">Обозреватель решений (Solution Explorer)</span> — панель слева или справа, где отображаются все файлы и структура проекта.</li>
+          <li class="course__item"><span class="bold">Панель ошибок</span> — выводит сообщения об ошибках при компиляции.</li>
+          <li class="course__item"><span class="bold">Панель вывода (Output)</span> — показывает системные сообщения, результат сборки и другую техническую информацию.</li>
+          <li class="course__item"><span class="bold">Панель инструментов (Toolbar)</span> — содержит кнопки запуска, компиляции, отладки и другие.</li>
+        </ul>
+        <div class="course__notice notice">НА ЗАМЕТКУ!<br>Если какие-то панели не отображаются, их можно включить через меню "Вид" (View).</div>
+        <h3 class="course__title-h3">Компиляция и запуск программы</h3>
+        <p>После написания кода вы можете скомпилировать и запустить программу:</p>
+        <ul class="course__list">
+          <li class="course__item">Нажмите кнопку «Пуск» (зелёная стрелка) в верхней части окна или клавишу F5.</li>
+          <li class="course__item">Visual Studio соберёт проект и запустит консольное приложение.</li>
+          <li class="course__item">В окне консоли вы увидите результат выполнения (например, надпись Hello, World!).</li>
+        </ul>
+        <p>Если в коде есть ошибки — они отобразятся в нижней панели с сообщением и строкой, где возникла проблема.</p>
+        <div class="course__notice notice">НА ЗАМЕТКУ!<br>Для запуска без отладки используйте клавишу Ctrl + F5 — это позволяет увидеть результат без необходимости закрывать окно консоли вручную.</div>
+        <button class="course__btn course__btn--1-2">Следующий урок</button>
       </div>
 
-      <div class="course__theme course__theme--1-3 disable">
-        <h2 class="course__title">Знакомство с первым</h2>
-        <p>Интерактивный электронный учебник «Программирование на языке C#» предназначен для студентов, обучающихся ИТ-специальностям, а также для всех, кто стремится самостоятельно освоить основы программирования на современном, универсальном и востребованном языке C#. Учебник включает структурированный теоретический материал, практические задания, интерактивные элементы, а также встроенную проверку знаний.</p>
-        <p>В отличие от многочисленных справочников и технической документации, данный учебник делает акцент именно 
-          на базовые конструкции языка, которые составляют фундамент при дальнейшем изучении C#, работе с фреймворками .NET и создании собственных приложений. Особое внимание уделяется таким темам, как переменные и типы данных, операторы и выражения, работа с циклами и условиями, массивами и строками, методами и классами.
-          Учебник обеспечивает поэтапное освоение материала — от простого к сложному — с регулярным закреплением знаний через практику и самопроверку. Благодаря интерактивному формату и адаптивной структуре он может использоваться как в рамках аудиторных занятий, так и для самостоятельного изучения, включая дистанционные образовательные форматы.</p>
-        <p>Использование данного ресурса поможет вам не только освоить основы языка C#, но и развить алгоритмическое мышление, научиться создавать простые консольные приложения и подготовиться к изучению более продвинутых тем, таких как объектно-ориентированное программирование и работа с графическим интерфейсом пользователя.</p>
+      <div class="course__theme course__theme--1-3">
+        <h2 class="course__title">1.3 Знакомство с первым приложением на C#</h2>
+        <h3 class="course__title-h3">Разбор кода Hello, World! на C#</h3>
+        <p>Первое, с чего начинается изучение любого языка программирования — это классическая программа Hello, World!, которая выводит в консоль простое сообщение.</p>
+        <p>Рассмотрим пример:</p> 
+        <div class="course__code">
+          <img src="img/image_1.jpg" alt="Photo" class="course__img" width="945" height="316">
+          <div class="course__code-result">
+            <input type="text" disabled>
+            <button class="course__btn">Запустить код</button>
+          </div>
+        </div>
+        <h3 class="course__title-h3">Подробный разбор каждой строки</h3>
+        <h4 class="course__title-h4">1. <span class="code">using System;</span></h4>
+        <ul class="course__list course__list-0">
+          <li class="course__item">Это директива подключения пространства имён <span class="code">System.</span></li>
+          <li class="course__item">Пространство имён (namespace) — это контейнер, в котором хранятся классы и другие структуры. Класс <span class="code">Console</span>, с которым мы работаем, находится именно в <span class="code">System.</span></li>
+        </ul>
+        <h4 class="course__title-h4">2. <span class="code">class Program</span></h4>
+        <ul class="course__list course__list-0">
+          <li class="course__item">Объявляется класс с именем <span class="code">Program</span>. Все инструкции должны быть внутри класса.</li>
+          <li class="course__item">В C# все действия выполняются внутри классов и методов.</li>
+          <li class="course__item">Условия, циклы и другие управляющие конструкции.</li>
+        </ul>
+        <h4 class="course__title-h4">3. <span class="code">static void Main(string[] args)</span></h4>
+        <ul class="course__list course__list-0">
+          <li class="course__item">Метод <span class="code">Main()</span> — точка входа в программу.</li>
+          <li class="course__item">Ключевое слово <span class="code">static</span> означает, что метод принадлежит самому классу, а не его объекту.</li>
+          <li class="course__item"><span class="code">void</span> означает, что метод ничего не возвращает.</li>
+          <li class="course__item"><span class="code">string[] args</span> — это массив аргументов, которые можно передать программе при запуске.</li>
+        </ul>
+        <h4 class="course__title-h4">4. <span class="code">Console.WriteLine("Hello, World!");</span></h4>
+        <ul class="course__list course__list-0">
+          <li class="course__item">Метод <span class="code">WriteLine()</span> выводит текст в консоль и переводит курсор на новую строку.</li>
+          <li class="course__item">Класс <span class="code">Console</span> используется для ввода/вывода данных в консоль.</li>
+        </ul>
+        <div class="course__notice notice">НА ЗАМЕТКУ!<br>В C# все строки кода заканчиваются точкой с запятой. Все блоки кода заключаются в фигурные скобки. Кавычки обозначают строку текста.</div>
+        <h3 class="course__title-h3">Структура программы: using, namespace, class, Main()</h3>
+        <p>Чтобы создавать более сложные приложения, важно понимать, как устроена простейшая программа.</p>
+        <p>Основные элементы:</p>
+        <img src="img/image_1.jpg" alt="Photo" class="course__img" width="945" height="327">
+        <h4 class="course__title-h4">1. <span class="code">using</span></h4>
+        <ul class="course__list course__list-0">
+          <li class="course__item">Подключает внешние пространства имён, в которых определены нужные классы.</li>
+          <li class="course__item">Например: <span class="code">using System;</span> подключает <span class="code">Console</span>, <span class="code">Math</span>, <span class="code">DateTime</span> и другие полезные классы.</li>
+        </ul>
+        <h4 class="course__title-h4">2. <span class="code">namespace</span></h4>
+        <ul class="course__list course__list-0">
+          <li class="course__item">Пространство имён (англ. "namespace") — это способ организации кода.</li>
+          <li class="course__item">Помогает избежать конфликтов имён, когда в проекте много классов.</li>
+        </ul>
+        <img src="img/image_1.jpg" alt="Photo" class="course__img" width="945" height="222">
+        <h4 class="course__title-h4">2. <span class="code">namespace</span></h4>
+        <ul class="course__list course__list-0">
+          <li class="course__item">Пространство имён (англ. "namespace") — это способ организации кода.</li>
+          <li class="course__item">Помогает избежать конфликтов имён, когда в проекте много классов.</li>
+        </ul>
+        <h4 class="course__title-h4">3. <span class="code">class</span></h4>
+        <ul class="course__list course__list-0">
+          <li class="course__item">Класс — это основная единица, внутри которой описываются все действия.</li>
+          <li class="course__item">Название класса должно начинаться с заглавной буквы.</li>
+          <li class="course__item">Обычно именуется как <span class="code">Program</span> в базовых примерах.</li>
+        </ul>
+        <h4 class="course__title-h4">4. <span class="code">Main()</span></h4>
+        <ul class="course__list course__list-0">
+          <li class="course__item">Это точка входа — программа начинается с выполнения команд внутри <span class="code">Main.</span>
+            <img src="img/image_1.jpg" alt="Photo" class="course__img" width="945" height="96">
+          </li>
+          <li class="course__item"><span class="code">static</span> — означает, что метод принадлежит классу, а не его объекту.</li>
+          <li class="course__item"><span class="code">void</span> — метод не возвращает значение.</li>
+          <li class="course__item"><span class="code">string[] args</span> — можно передавать параметры из командной строки (чаще используется в профессиональных приложениях).</li>
+        </ul>
+        <p>Все ключевые слова (<span class="code">class</span>, <span class="code">static</span>, <span class="code">void</span>, <span class="code">using</span>, <span class="code">namespace</span>) — это специальные зарезервированные слова языка C#.</p>
+        <div class="course__notice notice">НА ЗАМЕТКУ!<br>Программа обязательно должна содержать метод <span class="code">Main</span> — без него она не скомпилируется.</div>
       </div>
 
     </div>
