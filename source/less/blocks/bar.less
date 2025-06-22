@@ -1,21 +1,37 @@
 .bar {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
     width: 400px;
     height: 850px;
-    padding: 55px 45px;
+    padding: 55px 0px;
 
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
 
     border-radius: 20px;
     background-color: #EFF0F2;
+
+    transform: translate(-50% - 125px, -50%);
+}
+
+.bar__lists {
+    padding-bottom: 100px;
+    padding: 0 45px;
+
+    overflow: hidden;
+    overflow-y: scroll;
 }
 
 .bar__title {
     .zero();
 
     margin-bottom: 28px;
+    padding: 0 45px;
 
     .setFont(24px; 24px);
     font-weight: 700;
@@ -25,6 +41,7 @@
     .zero();
 
     margin-bottom: 28px;
+    padding: 0 45px;
 
     .setFont(20px; 20px);
     font-weight: 500;
@@ -37,8 +54,8 @@
 .bar__item-lesson {
     position: relative;
 
-    margin-bottom: 17px;
-    padding-left: 15px;
+    margin-bottom: 11px;
+    padding: 6px 15px;
 
     &:first-child {
         font-weight: 600;
@@ -51,15 +68,22 @@
         cursor: pointer;
 
         &::before {
-            left: 10px;
+            left: 15px;
         }
+    }
+
+    &.active {
+        color: #fff;
+        
+        border-radius: 15px;
+        background-color: #61A5C2;
     }
 
     &::before {
         content: '1';
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 6px;
+        left: -5px;
 
         display: block;
     }
@@ -95,23 +119,60 @@
     }
 }
 
-.bar__btn {
-    align-self: center;
-    width: 265px;
-    height: 52px;
-    margin-bottom: 25px;
+.bar__list-lesson-3 li {
+    &:nth-child(1)::before {
+        content: '3';
+    }
 
-    border: 1px solid #909090;
+    &:nth-child(2)::before {
+        content: '3.1';
+    }
+
+    &:nth-child(3)::before {
+        content: '3.2';
+    }
+
+    &:nth-child(4)::before {
+        content: '3.3';
+    }
+}
+
+.bar__list-lesson-4 li {
+    &:nth-child(1)::before {
+        content: '4';
+    }
+
+    &:nth-child(2)::before {
+        content: '4.1';
+    }
+
+    &:nth-child(3)::before {
+        content: '4.2';
+    }
+
+    &:nth-child(4)::before {
+        content: '4.3';
+    }
+}
+
+.bar__btn {
+    align-self: self-start;
+    margin-bottom: 20px;
+    margin-left: 45px;
+    padding: 16px 14px;
+
     border-radius: 20px;
 
     .setFont(16px; 16px);
 
     cursor: pointer;
 
-    &:hover {
-        color: purple;
-        border-color: purple;
-        transition: .6s;
+    &.active {
+        color: #fff;
+
+        border: none;
+        background-color: #61A5C2;
     }
+
 }
 

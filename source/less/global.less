@@ -17,7 +17,7 @@ html {
   box-sizing: inherit;
 
   &:focus {
-    outline: 2px solid @outline-color;
+    outline: none;
   }
 }
 
@@ -43,6 +43,7 @@ button {
 
 img {
   max-width: 100%;
+  margin: 20px 0;
 }
 
 input {
@@ -70,10 +71,12 @@ fieldset {
 }
 
 .main {
+  position: relative;
+
   width: 1450px;
   display: flex;
   justify-content: space-between;
-  margin: 100px auto;
+  margin: 100px auto 0;
 }
 
 .disable {
@@ -100,6 +103,31 @@ fieldset {
   background-position: 20px 13px;
 }
 
+.book {
+  background-image: url('../img/book.png');
+}
+
 .code {
-  background-color: #fffded9c;
+  padding: 0 5px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+.right {
+  border-color: green !important;
+  background-color: #cafcc3;
+}
+
+.wrong {
+  border-color: red !important;
+}
+
+.square {
+  display: inline-block;
+  padding: 1px 7px;
+
+  font-weight: 800;
+
+  border: 1px solid #909090;
+  border-radius: 5px;
 }
