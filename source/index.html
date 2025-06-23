@@ -39,8 +39,8 @@
           <ul class="bar__list-lesson bar__list-lesson-2">
             <li class="bar__item-lesson">Основы синтаксиса и структуры языка</li>
             <li class="bar__item-lesson item-theme item-theme--2-1">Типы данных и переменные</li>
-            <li class="bar__item-lesson">Операторы и выражения</li>
-            <li class="bar__item-lesson">Управляющие конструкции (условия,циклы)</li>
+            <li class="bar__item-lesson item-theme item-theme--2-2">Операторы и выражения</li>
+            <li class="bar__item-lesson item-theme item-theme--2-3">Управляющие конструкции (условия,циклы)</li>
           </ul>
         </li>
         <li class="bar__item-theme">
@@ -127,6 +127,10 @@
 
       <div class="course__theme course__theme--1-1 disable">
         <h2 class="course__title">1.1 История и особенности языка</h2>
+        <div class="course__progress">
+          <p>Тема 1/4 Основы синтаксиса и структуры языка ➜ Урок 1/3</p>
+          <img src="img/pb_1.png" alt="photo" width="440">
+        </div>
         <h3 class="course__title-h3">Краткая история языка C# (создатели, год появления, развитие)</h3>
         <p>C# («Си Шарп») — объектно-ориентированный язык программирования, созданный компанией <span class="bold">Microsoft</span> в рамках платформы <span class="bold">.NET.</span></p>
         <p>Разработка велась с <span class="bold">1998 по 2002 год</span> под руководством <span class="bold">Андерса Хейлсберга</span> — известного разработчика Turbo Pascal 
@@ -200,6 +204,10 @@
 
       <div class="course__theme course__theme--1-2 disable">
         <h2 class="course__title">1.2 Установка и настройка среды разработки (Visual Studio)</h2>
+        <div class="course__progress">
+          <p>Тема 1/4 Основы синтаксиса и структуры языка ➜ Урок 2/3</p>
+          <img src="img/pb_2.png" alt="photo" width="440">
+        </div>
         <h3 class="course__title-h3">Где скачать и как установить Visual Studio</h3>
         <p>Чтобы начать программировать на C#, необходимо установить интегрированную среду разработки — Visual Studio.</p>
         <p>Перейдите по официальной ссылке: <a href="https://visualstudio.microsoft.com/ru/downloads/">https://visualstudio.microsoft.com/ru/downloads/</a></p>
@@ -256,14 +264,18 @@
 
       <div class="course__theme course__theme--1-3 disable">
         <h2 class="course__title">1.3 Знакомство с первым приложением на C#</h2>
+        <div class="course__progress">
+          <p>Тема 1/4 Основы синтаксиса и структуры языка ➜ Урок 3/3</p>
+          <img src="img/pb_3.png" alt="photo" width="440">
+        </div>
         <h3 class="course__title-h3">Разбор кода Hello, World! на C#</h3>
         <p>Первое, с чего начинается изучение любого языка программирования — это классическая программа Hello, World!, которая выводит в консоль простое сообщение.</p>
         <p>Рассмотрим пример:</p> 
         <div class="course__code">
           <img src="img/image_14.jpg" alt="Photo" class="course__img" width="945" height="316">
           <div class="course__code-result">
-            <input type="text" disabled>
-            <button class="course__btn">Запустить код</button>
+            <input class="course__input-run" type="text" disabled>
+            <button class="course__btn course__btn-run">Запустить код</button>
           </div>
         </div>
         <h3 class="course__title-h3">Подробный разбор каждой строки</h3>
@@ -385,7 +397,6 @@
           
           <div class="course__example-btns">
             <button class="course__btn course__btn-gray course__btn-example-1">Узнать ответ</button>
-            <div class="course__example-result course__example-result-1">verno</div>
             <button class="course__btn item-theme course__btn-2-1">Следующий урок</button>
           </div>
         </div>
@@ -394,6 +405,10 @@
 
       <div class="course__theme course__theme--2-1 disable">
         <h2 class="course__title">2.1 Типы данных и переменные</h2>
+        <div class="course__progress">
+          <p>Тема 2/4 Основы синтаксиса и структуры языка ➜ Урок 1/3</p>
+          <img src="img/pb_1.png" alt="photo" width="440">
+        </div>
         <h3 class="course__title-h3">Примитивные типы данных (int, double, bool, char)</h3>
         <p>В языке C# <b>тип переменной</b> определяет, какие данные она может хранить. Например, целое число, дробное, символ или логическое значение. </p>
         <p>Примитивные типы — это фундаментальные типы данных в C#, с помощью которых описываются наиболее простые значения: числа, символы, логические значения. Они называются примитивными, потому что не состоят из других типов и хранят значение прямо в памяти, а не ссылку на него.</p>
@@ -409,9 +424,9 @@
         <div class="course__notice notice">НА ЗАМЕТКУ!<br>Все примитивные типы занимают определённое количество памяти: int — 4 байта, double — 8 байт, bool — 1 байт, char — 2 байта.</div>
         <div class="course__example course__example--3">
           <p><b>Какие из следующих строк кода корректно создают переменные примитивных типов в языке C#?</b></p>
-          <div class="course__labels">
+          <div class="course__labels course__labels-checkbox">
             <label class="course__label">
-              <input type="checkbox" id="1">
+              <input class="" type="checkbox" id="1">
               <span class="code">int count = 5;</span>
             </label>
             <label class="course__label">
@@ -433,7 +448,6 @@
           </div>
           <div class="course__example-btns">
             <button class="course__btn course__btn-gray course__btn-example-3">Узнать ответ</button>
-            <div class="course__example-result course__example-result-3">verno</div>
           </div>
         </div>
         <h3 class="course__title-h3">Ссылочные типы данных (string, object)</h3>
@@ -453,7 +467,7 @@
         <div class="course__notice notice">НА ЗАМЕТКУ!<br>Тип string — это на самом деле класс, поэтому у строк есть методы, которые можно вызывать: ToUpper(), Length, Contains() и другие.</div>
         <div class="course__example course__example--4">
           <p><b>Какие из следующих строк кода корректно создают переменные примитивных типов в языке C#?</b></p>
-          <div class="course__labels">
+          <div class="course__labels course__labels-radio">
             <label class="course__label">
               <input type="radio" name="ex-4" id="1">
               <span class="code">int count = 5;</span>
@@ -473,7 +487,6 @@
           </div>
           <div class="course__example-btns">
             <button class="course__btn course__btn-gray course__btn-example-4">Узнать ответ</button>
-            <div class="course__example-result course__example-result-4">verno</div>
           </div>
         </div>
         <h3 class="course__title-h3">Объявление и инициализация переменных</h3>
@@ -492,7 +505,7 @@
           точность в написании имён.</div>
         <div class="course__example course__example--5">
           <p><b>Какие из следующих строк кода корректно создают переменные примитивных типов в языке C#?</b></p>
-          <div class="course__labels">
+          <div class="course__labels course__labels-radio">
             <label class="course__label">
               <input type="radio" name="ex-5">
               <span class="code">int My Number = 15;</span>
@@ -512,7 +525,6 @@
           </div>
           <div class="course__example-btns">
             <button class="course__btn course__btn-gray course__btn-example-5">Узнать ответ</button>
-            <div class="course__example-result course__example-result-5">verno</div>
           </div>
         </div>
         <div class="course__example course__example-6">
@@ -537,7 +549,6 @@
           </div>
           <div class="course__example-btns">
             <button class="course__btn course__btn-gray course__btn-example-6">Узнать ответ</button>
-            <div class="course__example-result course__example-result-6">verno</div>
           </div>
         </div>
         <h3 class="course__title-h3">Константы и неизменяемые значения</h3>
@@ -549,7 +560,7 @@
           слово с заглавной буквы, например MaxSpeed или PiValue.</div>
           <div class="course__example course__example--7">
             <p><b>Какие из следующих строк кода корректно создают переменные примитивных типов в языке C#?</b></p>
-            <div class="course__labels">
+            <div class="course__labels course__labels-radio">
               <label class="course__label">
                 <input type="radio" name="ex-7">
                 <span>Оно успешно изменится</span>
@@ -569,7 +580,6 @@
             </div>
             <div class="course__example-btns">
               <button class="course__btn course__btn-gray course__btn-example-7">Узнать ответ</button>
-              <div class="course__example-result course__example-result-7">verno</div>
             </div>
           </div>
           <div class="course__example-2">
@@ -579,9 +589,68 @@
             <textarea class="course__example-area" name="example-2__result" id="1" placeholder="Написать"></textarea>
             <div class="course__example-btns">
               <button class="course__btn course__btn-gray course__btn-example-2">Узнать ответ</button>
-              <button class="course__btn">Следующий урок</button>
+              <button class="course__btn item-theme course__btn-2-2">Следующий урок</button>
             </div>
           </div>
+      </div>
+
+      <div class="course__theme course__theme--2-2 disable">
+        <h2 class="course__title">2.2 Операторы и выражения</h2>
+        <div class="course__progress">
+          <p>Тема 2/4 Основы синтаксиса и структуры языка ➜ Урок 2/3</p>
+          <img src="img/pb_2.png" alt="photo" width="440">
+        </div>
+        <h3 class="course__title-h3">Арифметические, логические и побитовые операторы</h3>
+        <p>В программировании <b>операторы</b> — это символы, которые обозначают действие. Они используются в выражениях, где обрабатываются значения переменных.</p>
+        <p>Арифметические операторы позволяют выполнять математические действия. В C# доступны сложение <span class="code">+</span>, вычитание <span class="code">-</span>, умножение <span class="code">*</span>, деление <span class="code">/</span> и остаток от деления <span class="code">%</span>. Например, выражение <span class="code">int sum = 5 + 3;</span> вернёт значение 8. Деление двух целых чисел даёт целый результат, поэтому <span class="code">7 / 2</span> вернёт 3, а не 3.5. Чтобы получить дробь, хотя бы одно число должно быть типа <span class="code">double</span>.</p>
+        <p>Логические операторы применяются к значениям <span class="code">true</span> и <span class="code">false</span>. Оператор <span class="code">&amp;&amp;</span> возвращает истину, если оба условия истинны. Оператор <span class="code">||</span> возвращает истину, если хотя бы одно условие истинно. Оператор <span class="code">!</span> меняет логическое значение на противоположное. Например, если <span class="code">bool isRain = false;</span>, то <span class="code">!isRain</span> будет <span class="code">true</span>.</p>
+        <p>Побитовые операторы работают с двоичными представлениями чисел. Они используются реже, чаще в системном и низкоуровневом программировании. К ним относятся <span class="code">&amp;</span>, <span class="code">|</span>, <span class="code">^</span>, <span class="code">~</span>, <span class="code">&lt;&lt;</span>, <span class="code">&gt;&gt;</span>. Эти операции применяются побитово и полезны, например, при работе с флагами или масками доступа.</p>
+        <div class="course__notice notice">НА ЗАМЕТКУ!<br>Логические операторы работают только с bool. Побитовые операторы можно применять к числам типа int, byte, long и другим целочисленным типам.</div>
+        <div class="course__example course__example--8">
+          <p><b>Что вернёт выражение <span class="code">(5 &gt; 3) &amp;&amp; (2 == 2)</span>?</b></p>
+            <div class="course__labels course__labels-radio">
+              <label class="course__label">
+                <input type="radio" name="ex-8">
+                <span><span class="code">true</span></span>
+              </label>
+              <label class="course__label">
+                <input type="radio" name="ex-8">
+                <span><span class="code">false</span></span>
+              </label>
+              <label class="course__label">
+                <input type="radio" name="ex-8">
+                <span><span class="code">null</span></span>
+              </label>
+              <label class="course__label">
+                <input type="radio" name="ex-8">
+                <span>Ошибка компиляции</span>
+              </label>
+            </div>
+            <div class="course__example-btns">
+              <button class="course__btn course__btn-gray course__btn-example-7">Узнать ответ</button>
+            </div>
+        </div>
+        <h3 class="course__title-h3">Операторы присваивания и сравнения</h3>
+        <p>Оператор присваивания — это символ <span class="code">=</span>, он используется для того, чтобы сохранить значение в переменную. Например, <span class="code">int age = 25;</span> — создаёт переменную <span class="code">age</span> и присваивает ей значение 25.</p>
+        <p>Кроме обычного присваивания, есть и <b>составные операторы присваивания</b>, которые совмещают арифметику и присваивание. Например, <span class="code">x += 5;</span> означает "прибавить 5 к значению x" и сохранить результат в x. Это более короткая форма записи <span class="code">x = x + 5;</span>.</p>
+        <p>Операторы сравнения возвращают значение типа <span class="code">bool</span> — <span class="code">true</span> или <span class="code">false</span>. Они проверяют, равны ли значения (<span class="code">==</span>), не равны (<span class="code">!=</span>), больше (<span class="code">&gt;</span>), меньше (<span class="code">&lt;</span>), больше или равно (<span class="code">&gt;=</span>) и меньше или равно (<span class="code">&lt;=</span>). Например, <span class="code">7 &gt; 3</span> вернёт <span class="code">true</span>, а <span class="code">5 == 10</span> — <span class="code">false</span>.</p>
+        <div class="course__notice notice">НА ЗАМЕТКУ!<br>Не путайте = и ==. Первый присваивает значение, второй сравнивает. Ошибка в использовании этих операторов — одна из самых частых у новичков.</div>
+      </div>
+
+      <div class="course__theme course__theme--2-3 disable">
+        <h2 class="course__title">2.3 Управляющие конструкции (условия, циклы)</h2>
+        <div class="course__progress">
+          <p>Тема 2/4 Основы синтаксиса и структуры языка ➜ Урок 3/3</p>
+          <img src="img/pb_3.png" alt="photo" width="440">
+        </div>
+        <h3 class="course__title-h3">Условные операторы: if и switch</h3>
+        <p>Иногда программа должна выполнять разные действия в зависимости от условий. Для этого используются условные операторы. Самый распространённый из них — это <span class="code">if</span>.</p>
+        <p>Оператор <span class="code">if</span> проверяет логическое выражение и, если оно истинно, выполняет блок кода. При необходимости можно добавить <span class="code">else</span>, чтобы задать альтернативное поведение.</p>
+        <p>Пример:</p>
+        <img src="img/image_10.jpg" alt="photo">
+        <p>Когда нужно проверить несколько вариантов значений одной переменной, удобнее использовать оператор <span class="code">switch</span>. Он заменяет длинную цепочку <span class="code">if-else if</span>. Каждое значение проверяется отдельно, а выполнение может завершиться с помощью <span class="code">break</span>:</p>
+        <img src="img/image_11.jpg" alt="photo">
+        <div class="course__notice notice">НА ЗАМЕТКУ!<br>Каждый case должен завершаться командой break, чтобы программа не выполнила лишние блоки. Без break выполнение перейдёт к следующему case.</div>
       </div>
 
     </div>

@@ -1,8 +1,12 @@
 // Search
 
-const allEl = document.querySelectorAll('p,div');
+const allEl = document.querySelectorAll('p,div.course__notice, li');
 const inputSearch = document.querySelector('.course__search-input');
 const btnSearch = document.querySelector('.course__search-btn');
+
+function deleteFinder(el) {
+  el.classList.remove('finded');
+}
 
 btnSearch.addEventListener('click', () => {
   let word = inputSearch.value.trim().toLowerCase().toString();
@@ -10,7 +14,9 @@ btnSearch.addEventListener('click', () => {
     let a = allEl[i].textContent.trim().toLocaleLowerCase().includes(word);
     let coord = allEl[i].getBoundingClientRect();
     if (a) {
-      window.scrollTo(0, coord.top);
+      window.scrollTo(0, coord.top - 300);
+      allEl[i].classList.add('finded');
+      setTimeout(deleteFinder, 9000, allEl[i]);
       break;
     }
   }
@@ -38,12 +44,12 @@ function showTheme(ev) {
   navTheme.classList.add('active');
   theme.classList.remove('disable');
 
+  window.scrollTo(0, 0);
 }
 
 for (let i = 0; i < navList.length; i++) {
   navList[i].addEventListener('click', showTheme)
 }
-
 
 
 // Test 1
@@ -53,6 +59,7 @@ const answer = document.querySelector('.course__example-1 .course__example-answe
 const btnAnswer = document.querySelector('.course__btn-example-1');
 const result = document.querySelector('.course__example-result-1');
 const rightAnswer = [ '3', '2', '4', '1', '5' ];
+const color1 = document.querySelector('.course__example-1 .course__example-bot');
 
 for (let i = 0; i < options.length; i++) {
   options[i].addEventListener('click', (ev) => {
@@ -61,6 +68,8 @@ for (let i = 0; i < options.length; i++) {
       answer.append(ev.target);
       document.querySelector('.course__example-1 .course__example-empty--' + num).classList.toggle('disable');
     } else {
+      ev.target.classList.remove('right');
+      ev.target.classList.remove('wrong');
       option.append(ev.target);
       document.querySelector('.course__example-1 .course__example-empty--' + num).classList.toggle('disable');
     }
@@ -69,20 +78,17 @@ for (let i = 0; i < options.length; i++) {
 
 btnAnswer.addEventListener('click', () => {
   const el = answer.children;
-  const curAnswer = [];
-  
-  for (let i = 0; i < el.length; i++) {
-    curAnswer.push(el[i].classList[1].slice(-1));
-  }
+  const answer2 = document.querySelectorAll('.course__example-1 .course__example-answers .course__example-option');
 
-  if (JSON.stringify(curAnswer) == JSON.stringify(rightAnswer)) {
-    result.textContent = 'Верно';
-  } else {
-    result.textContent = 'Неверно';
+  for (let i = 0; i < answer2.length; i++) {
+    if (JSON.stringify(answer2[i].classList[1].slice(-1)) == JSON.stringify(rightAnswer[i])) {
+      answer2[i].classList.add('right');
+    } else {
+      answer2[i].classList.add('wrong');
+    }
   }
 
 })
-
 
 
 // Test 2
@@ -110,10 +116,16 @@ const btnRessultEx3 = document.querySelector('.course__btn-example-3');
 
 
 btnRessultEx3.addEventListener('click', () => {
-  if (inputsEx3[0].checked & inputsEx3[2].checked & inputsEx3[4].checked) {
-    resultEx3.textContent = 'Verno';
-  } else {
-    resultEx3.textContent = 'Neverno';
+  for (let i = 0; i < inputsEx3.length; i++) {
+    inputsEx3[i].classList.remove('right');
+    inputsEx3[i].classList.remove('wrong');
+    if (inputsEx3[i].checked) {
+      if (i == 0 || i == 2 || i == 4) {
+        inputsEx3[i].classList.add('right');
+      } else {
+        inputsEx3[i].classList.add('wrong');
+      }
+    }
   }
 })
 
@@ -126,10 +138,16 @@ const btnRessultEx4 = document.querySelector('.course__btn-example-4');
 
 
 btnRessultEx4.addEventListener('click', () => {
-  if (inputsEx4[2].checked) {
-    resultEx4.textContent = 'Verno';
-  } else {
-    resultEx4.textContent = 'Neverno';
+  for (let i = 0; i < inputsEx4.length; i++) {
+    inputsEx4[i].classList.remove('right');
+    inputsEx4[i].classList.remove('wrong');
+    if (inputsEx4[i].checked) {
+      if ( i == 2 ) {
+        inputsEx4[i].classList.add('right');
+      } else {
+        inputsEx4[i].classList.add('wrong');
+      }
+    }
   }
 })
 
@@ -143,10 +161,16 @@ const btnRessultEx5 = document.querySelector('.course__btn-example-5');
 
 
 btnRessultEx5.addEventListener('click', () => {
-  if (inputsEx5[2].checked) {
-    resultEx5.textContent = 'Verno';
-  } else {
-    resultEx5.textContent = 'Neverno';
+  for (let i = 0; i < inputsEx4.length; i++) {
+    inputsEx5[i].classList.remove('right');
+    inputsEx5[i].classList.remove('wrong');
+    if (inputsEx5[i].checked) {
+      if ( i == 2 ) {
+        inputsEx5[i].classList.add('right');
+      } else {
+        inputsEx5[i].classList.add('wrong');
+      }
+    }
   }
 })
 
@@ -158,6 +182,7 @@ const answer6 = document.querySelector('.course__example-6 .course__example-answ
 const btnAnswer6 = document.querySelector('.course__btn-example-6');
 const result6 = document.querySelector('.course__example-result-6');
 const rightAnswer6 = [ '3', '1', '2', '4', '5' ];
+const color6 = document.querySelector('.course__example-6 .course__example-bot');
 
 for (let i = 0; i < options6.length; i++) {
   options6[i].addEventListener('click', (ev) => {
@@ -166,6 +191,8 @@ for (let i = 0; i < options6.length; i++) {
       answer6.append(ev.target);
       document.querySelector('.course__example-6 .course__example-empty--' + num).classList.toggle('disable');
     } else {
+      ev.target.classList.remove('right');
+      ev.target.classList.remove('wrong');
       option6.append(ev.target);
       document.querySelector('.course__example-6 .course__example-empty--' + num).classList.toggle('disable');
     }
@@ -174,16 +201,15 @@ for (let i = 0; i < options6.length; i++) {
 
 btnAnswer6.addEventListener('click', () => {
   const el = answer6.children;
-  const curAnswer = [];
+  const answer2 = document.querySelectorAll('.course__example-6 .course__example-answers .course__example-option');
   
-  for (let i = 0; i < el.length; i++) {
-    curAnswer.push(el[i].classList[1].slice(-1));
-  }
 
-  if (JSON.stringify(curAnswer) == JSON.stringify(rightAnswer6)) {
-    result6.textContent = 'Верно';
-  } else {
-    result6.textContent = 'Неверно';
+  for (let i = 0; i < answer2.length; i++) {
+    if (JSON.stringify(answer2[i].classList[1].slice(-1)) == JSON.stringify(rightAnswer6[i])) {
+      answer2[i].classList.add('right');
+    } else {
+      answer2[i].classList.add('wrong');
+    }
   }
 
 })
@@ -198,9 +224,24 @@ const btnResultEx7 = document.querySelector('.course__btn-example-7');
 
 
 btnResultEx7.addEventListener('click', () => {
-  if (inputsEx7[1].checked) {
-    resultEx7.textContent = 'Verno';
-  } else {
-    resultEx7.textContent = 'Neverno';
+  for (let i = 0; i < inputsEx4.length; i++) {
+    inputsEx7[i].classList.remove('right');
+    inputsEx7[i].classList.remove('wrong');
+    if (inputsEx7[i].checked) {
+      if ( i == 1 ) {
+        inputsEx7[i].classList.add('right');
+      } else {
+        inputsEx7[i].classList.add('wrong');
+      }
+    }
   }
+})
+
+// Запустить код
+
+const inputRun = document.querySelector('.course__input-run');
+const btnRun = document.querySelector('.course__btn-run');
+
+btnRun.addEventListener('click', () => {
+  inputRun.value = '"Hello World!"'
 })

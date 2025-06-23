@@ -57,6 +57,9 @@
     margin-bottom: 11px;
     padding: 6px 15px;
 
+    border-radius: 15px;
+    transition: .2s;
+
     &:first-child {
         font-weight: 600;
     }
@@ -69,6 +72,10 @@
 
         &::before {
             left: 15px;
+        }
+
+        &:hover {
+            background-color: #BED6E0;
         }
     }
 
@@ -166,6 +173,7 @@
     .setFont(16px; 16px);
 
     cursor: pointer;
+    transition: .2s;
 
     &.active {
         color: #fff;
@@ -174,5 +182,8 @@
         background-color: #61A5C2;
     }
 
+    &:hover {
+        background-color: #BED6E0;
+    }
 }
 
